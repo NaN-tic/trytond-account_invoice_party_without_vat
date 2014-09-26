@@ -1,0 +1,42 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:account.invoice:"
+msgid "And the default invoicing party has not any address."
+msgstr "El tercer tercer per defecte no disposa de cap adreça."
+
+msgctxt "error:account.invoice:"
+msgid "And the default invoicing party is not configured."
+msgstr "El tercer per defecte no està configurat."
+
+msgctxt "error:account.invoice:"
+msgid "The party with ID %s has not any VAT"
+msgstr "El tercer amb ID \"%s\" no té cap CIF/NIF"
+
+msgctxt "field:account.configuration,default_invoicing_journal:"
+msgid "Default Invoicing Journal"
+msgstr "Diari per defecte"
+
+msgctxt "field:account.configuration,default_invoicing_party:"
+msgid "Default Invoicing Party"
+msgstr "Tercer per defecte"
+
+msgctxt "help:account.configuration,default_invoicing_journal:"
+msgid ""
+"The default journal to set in invoices when the party selected one has not "
+"any VAT."
+msgstr ""
+"El diari per defecte que s'utilitzarà quan el tercer no disposi de CIF/NIF "
+"per facturar"
+
+msgctxt "help:account.configuration,default_invoicing_party:"
+msgid ""
+"The default party to set in invoices when the selected one has not any VAT."
+msgstr ""
+"El tercer per defecte que s'utilitzarà quan el tercer no disposi de CIF/NIF "
+"per facturar"
+
+msgctxt "view:account.configuration:"
+msgid "Invoicing"
+msgstr "Facturació"

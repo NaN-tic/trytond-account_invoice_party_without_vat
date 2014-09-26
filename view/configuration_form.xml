@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file is part of account_invoice_party_without_vat module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/field[@name=&quot;default_account_payable&quot;]"
+            position="after">
+        <separator string="Invoicing" id="invoicing" colspan="4"/>
+        <label name="default_invoicing_party"/>
+        <field name="default_invoicing_party"/>
+        <label name="default_invoicing_journal"/>
+        <field name="default_invoicing_journal"/>
+    </xpath>
+</data>
