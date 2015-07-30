@@ -16,8 +16,6 @@ class Invoice:
         super(Invoice, cls).__setup__()
         cls._error_messages.update({
                 'party_has_not_vat': ('The party with ID %s has not any VAT'),
-                'not_default_invoicing_party_has_not_vat': ('And the default '
-                    'invoicing party has not a VAT.'),
                 'default_invoicing_party_has_not_address': ('And the default '
                     'invoicing party has not an address.'),
                 })
@@ -52,10 +50,6 @@ class Invoice:
         
         party = account_configuration.default_invoicing_party
         if party:
-            if not party.vat_code:
-                cls.raise_user_error('party_has_not_vat',
-                    error_args=(values['party'],),
-                    error_description='not_default_invoicing_party_has_not_vat',)
             values['party'] = party
 
             invoice_address = party.address_get(type='invoice')
