@@ -3,12 +3,10 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:account.invoice:"
-msgid "And the default invoicing party has not any address."
-msgstr "El tercero por defecto para facturar no dispone de ninguna dirección."
-
-msgctxt "error:account.invoice:"
-msgid "And the default invoicing party is not configured."
-msgstr "No hay ningún tercero por defecto para facturar."
+msgid "And the default invoicing party has not an address."
+msgstr ""
+"El tercero por defecto para facturar no dispone de ninguna dirección de "
+"facturación."
 
 msgctxt "error:account.invoice:"
 msgid "The party with ID %s has not any VAT"
