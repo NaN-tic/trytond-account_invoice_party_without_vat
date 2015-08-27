@@ -24,14 +24,13 @@ class Invoice:
     def on_change_party(self):
         AccountConfiguration = Pool().get('account.configuration')
 
-        changes = super(Invoice, self).on_change_party()
+        super(Invoice, self).on_change_party()
 
         if self.party and not self.party.vat_code:
             # change journal if party has not VAT; not change party
-            account_configuration = AccountConfiguration(1)
-            if account_configuration.default_invoicing_journal:
-                changes['journal'] = account_configuration.default_invoicing_journal.id
-        return changes
+            configuration = AccountConfiguration(1)
+            if configuration.default_invoicing_journal:
+                self.journal = configuration.default_invoicing_journal
 
     @classmethod
     def create(cls, vlist):
