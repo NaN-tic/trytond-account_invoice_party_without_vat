@@ -37,7 +37,10 @@ class Invoice:
         Party = Pool().get('party.party')
         for values in vlist:
             if values['type'] in ('out_invoice', 'out_credit_note'):
-                party, = Party.search([('id', '=', values['party'])])
+                parties = Party.search([('id', '=', values['party'])])
+                if not parties:
+                    cls.assign_without_vat(values)
+                party, = parties
                 if not party.vat_code:
                     cls.assign_without_vat(values)
         return super(Invoice, cls).create(vlist)
