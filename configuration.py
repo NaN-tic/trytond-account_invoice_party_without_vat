@@ -6,10 +6,10 @@ from trytond.pool import PoolMeta
 from trytond.pyson import Bool, Eval
 
 __all__ = ['AccountConfiguration']
-__metaclass__ = PoolMeta
 
 
 class AccountConfiguration:
+    __metaclass__ = PoolMeta
     __name__ = 'account.configuration'
     default_invoicing_party = fields.Property(fields.Many2One(
             'party.party', 'Default Invoicing Party',
